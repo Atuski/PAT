@@ -1,0 +1,27 @@
+from math import sqrt
+def is_prime(n):
+    for i in range(2, int(sqrt(n))+1):
+        if n % i == 0:
+            return 0
+            break
+    else:
+        return 1
+m,n = (int(x) for x in input().split())
+i = 0
+number = 2
+prime = []
+while 1 :
+    if is_prime(number) == 1:
+        i += 1
+        if i > m - 1:
+            prime.append(number)
+        if i > n - 1  :
+            break
+    number += 1
+    
+i = 0
+for each in prime:
+    i += 1
+    print(each,end = ' ')
+    if i % 10 == 0:
+        print('\n')
