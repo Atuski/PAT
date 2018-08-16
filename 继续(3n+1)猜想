@@ -1,0 +1,32 @@
+def fun1(n):
+    l = []
+    i = 0
+    while n!=1:
+        if n % 2 == 0:
+            n = n // 2
+            l.append(n)
+        else :
+            n = (3*n+1) // 2
+            l.append(n)
+        i += 1
+    return l
+number = input()
+number_list = input()
+process_list = []
+result = []
+number_list = number_list.split(' ')
+if len(number_list)!= int(number):
+    print('flase')
+else:
+    for each1 in number_list:
+        each1 = int(each1)
+        process_list.extend(fun1(each1))
+    for each2 in number_list:
+        each2 = int(each2)
+        if each2 in process_list:
+            continue
+        else:
+            result.append(each2)
+
+result.sort(reverse=True)
+print(' '.join('%s'%res for res in result)) 
