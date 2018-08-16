@@ -1,0 +1,20 @@
+def fun(i,j):
+    if i == 0 and j!=0:
+        print('flase')
+    elif i==0 or  j==0:
+        return ''
+    else:
+        return [str(i*j),str(j-1)]
+line = input()
+l = []
+line = line.split(' ')
+if len(line) % 2 == 0:
+    length = len(line)//2
+    line = iter(line)
+    for each in range(length):
+        i = int(next(line))
+        j = int(next(line))
+        l += fun(i,j)       
+    print(' '.join(l))        
+else:
+    print('flase')        
