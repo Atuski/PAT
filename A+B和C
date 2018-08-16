@@ -1,0 +1,14 @@
+T = int(input())
+input_list = []
+if T == 0:
+    print('flase')
+for i in range(T):
+    case = input()
+    case = case.split(' ')
+    input_list.append(case)
+
+for each in range(T):
+    if int(input_list[each][0])+int(input_list[each][1])>int(input_list[each][2]):
+        print('Case #%s: true' % (each+1))
+    else:
+        print('Case #%s: false' % (each+1))
