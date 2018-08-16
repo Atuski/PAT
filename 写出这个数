@@ -1,0 +1,36 @@
+def fun1(s):
+    if s:
+        return fun1(s=s//10) + s % 10
+    else:
+        return 0
+
+def fun2(n):
+    l = []
+    n = str(n)
+    for each in n :
+        if each=='0':
+            l.append('ling')
+        elif each=='1':
+            l.append('yi')
+        elif each=='2':
+            l.append('er')
+        elif each=='3':
+            l.append('san')
+        elif each=='4':
+            l.append('si')
+        elif each=='5':
+            l.append('wu')
+        elif each=='6':
+            l.append('liu')
+        elif each=='7':
+            l.append('qi')
+        elif each=='8':
+            l.append('ba')
+        else:
+            l.append('jiu')
+
+    return l
+s = int(input())
+n = fun1(s)
+l = fun2(n)
+print(' '.join(l))
