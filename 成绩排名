@@ -1,0 +1,21 @@
+s = int(input())
+l = []
+p = []
+a = []
+for i in range(s):
+    l.append(input())
+for i in range(s):
+    p.append(l[i].split(' '))
+for q in p:
+    try :
+        r = int(q[2])   
+        a.append(r)
+    except:
+        print('worry')
+local = a.index(max(a))
+print(p[local][0]+' '+p[local][1])
+    
+#print(' '.join(i for i in p[local]))
+local = a.index(min(a))
+print(p[local][0]+' '+p[local][1])
+#print(' '.join(i for i in p[local]))
